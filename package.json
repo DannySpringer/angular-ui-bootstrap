@@ -1,8 +1,8 @@
 {
   "author": "https://github.com/angular-ui/bootstrap/graphs/contributors",
-  "name": "angular-ui-bootstrap",
-  "version": "2.5.1-SNAPSHOT",
-  "description": "Native AngularJS (Angular) directives for Bootstrap",
+  "name": "@aoc/angular-ui-bootstrap",
+  "version": "2.5.1",
+  "description": "Native AngularJS (Angular) directives for Bootstrap, packaged for AOC",
   "homepage": "http://angular-ui.github.io/bootstrap/",
   "keywords": [
     "angularjs",
