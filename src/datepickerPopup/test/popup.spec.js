@@ -407,6 +407,15 @@ describe('datepicker popup', function() {
 
         $document.off('keydown', getKey);
       });
+
+      it('should close the popup and set focus to the input when a day is clicked', function() {
+        clickOption(17);
+        assignElements(wrapElement);
+        expect(dropdownEl.length).toBe(0);
+        $timeout.flush();
+        console.log(document.activeElement);
+        expect(document.activeElement.tagName).toBe('INPUT');
+      });
     });
 
     describe('works with HTML5 date input types', function() {
@@ -577,6 +586,12 @@ describe('datepicker popup', function() {
       expect(dropdownEl.length).toBe(0);
       expect(inputEl.val()).toBe('2010-09-15');
       expect($rootScope.date).toEqual(new Date('2010-09-15T10:00:00.000Z'));
+    });
+
+    it('should close the popup and set focus to the input when a day is clicked', function() {
+      clickOption(17);
+      assignElements(wrapElement);
+      expect(dropdownEl.length).toBe(0);
     });
   });
 
